@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Redirecting to YouTube</title>
+        <script>
+            // this code tries to redirect to the youtube app; if that times out after 1 second, it redirects to the browser
+            const channelId = "UCjngISBndQ4YRMQM0BFJX-g";
+            window.location.href = `youtube://${channelId}`;
+            setTimeout(() => {
+                window.location.href = `https://www.youtube.com/channel/${channelId}`;
+            }, 1000);
+        </script>
+    </head>
+    <body>
+        <p style="text-align: center; font-family: sans-serif">Redirecting to the YouTube app...</p>
+    </body>
+</html>
